@@ -10,6 +10,7 @@ export interface IPageDroppable {
 
 export interface PageDroppableProps {
   items: Component[];
+  deleteFunction: (componentID: string) => void;
 }
 
 export interface IPageDraggable {

@@ -22,7 +22,12 @@ const PageDroppable = (props: PageDroppableProps) => {
   return (
     <ul ref={setNodeRef}>
       {props.items.map((item) => (
-        <li key={item.id}>{renderComponent(item.id)}</li>
+        <li key={item.id}>
+          {renderComponent(item.id)}
+          <button type="button" onClick={() => props.deleteFunction(item.id)}>
+            Delete
+          </button>
+        </li>
       ))}
     </ul>
   );

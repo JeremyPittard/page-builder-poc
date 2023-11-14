@@ -33,6 +33,12 @@ function App() {
     updatePageItems(temp);
   };
 
+  const onDelete = (componentID: string) => {
+    console.log("do the thing");
+    const temp = [...pageItems];
+    updatePageItems(temp.filter((item) => item.id != componentID));
+  };
+
   return (
     <MantineProvider>
       <DndContext onDragEnd={(event) => addItemsToPage(event)}>
@@ -48,7 +54,7 @@ function App() {
             ))}
           </ul>
           <div className="page">
-            <PageDroppable items={[...pageItems]} />
+            <PageDroppable items={[...pageItems]} deleteFunction={onDelete} />
           </div>
         </main>
         <footer>
