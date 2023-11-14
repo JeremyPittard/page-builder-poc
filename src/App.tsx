@@ -48,7 +48,7 @@ function App() {
             ))}
           </ul>
           <div className="page">
-            <PageDroppable items={...pageItems} />
+            <PageDroppable items={[...pageItems]} />
           </div>
         </main>
       </DndContext>
