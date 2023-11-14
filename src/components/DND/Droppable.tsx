@@ -8,7 +8,7 @@ const PageDroppable = (props: PageDroppableProps) => {
     id: "page-droppable",
   });
 
-  const renderComponent = (componentID) => {
+  const renderComponent = (componentID: string) => {
     switch (componentID) {
       case "hero-content-left":
         return <HeroContentLeft />;
