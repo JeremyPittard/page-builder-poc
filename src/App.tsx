@@ -51,6 +51,15 @@ function App() {
             <PageDroppable items={[...pageItems]} />
           </div>
         </main>
+        <footer>
+          <a
+            href="https://github.com/JeremyPittard/page-builder-poc"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            the githubs
+          </a>
+        </footer>
       </DndContext>
     </MantineProvider>
   );
